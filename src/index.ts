@@ -9,14 +9,14 @@ import { editCommand } from "./commands/edit";
 const program = new Command();
 
 program
-    .name("startup")
-    .description("Start your projects with 1 command")
-    .version("0.1.0");
+  .name("startup")
+  .description("Start your projects with 1 command")
+  .version("0.1.0");
 
-program.addCommand(startCommand);
+program.addCommand(startCommand); //TODO: implement a "depends-on" function
 program.addCommand(addCommand);
 program.addCommand(removeCommand);
 program.addCommand(listCommand);
-program.addCommand(editCommand);
+program.addCommand(editCommand); //TODO: edit/add/delete service
 
 program.parse();
